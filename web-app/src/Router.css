@@ -1,0 +1,76 @@
+/* Router.css  — shared nav bar that appears on scanner & dashboard */
+
+.router-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── Router nav bar ─────────────────────────────────────────────── */
+.router-nav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 28px;
+  background: rgba(255,255,255,0.95);
+  border-bottom: 1px solid rgba(0,119,182,0.15);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 1px 6px rgba(0,60,100,0.07);
+  gap: 20px;
+}
+
+.rn-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Oxanium", "Source Code Pro", monospace;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #0077b6;
+  cursor: pointer;
+  user-select: none;
+}
+.rn-hex {
+  font-size: 18px;
+  color: #0077b6;
+  filter: drop-shadow(0 0 4px rgba(0,119,182,0.3));
+}
+
+.rn-links {
+  display: flex;
+  gap: 8px;
+}
+
+.rn-btn {
+  background: rgba(0,119,182,0.05);
+  border: 1px solid rgba(0,119,182,0.12);
+  color: #6b8fa8;
+  border-radius: 7px;
+  padding: 7px 16px;
+  font-size: 13px;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.rn-btn:hover {
+  border-color: rgba(0,119,182,0.35);
+  color: #0077b6;
+  background: rgba(0,119,182,0.09);
+}
+.rn-btn.rn-active {
+  border-color: rgba(0,119,182,0.45);
+  color: #0077b6;
+  background: rgba(0,119,182,0.10);
+  box-shadow: 0 2px 10px rgba(0,119,182,0.12);
+}
+
+@media (max-width: 500px) {
+  .router-nav { padding: 10px 16px; }
+  .rn-logo    { font-size: 13px; }
+  .rn-btn     { padding: 6px 10px; font-size: 12px; }
+}
